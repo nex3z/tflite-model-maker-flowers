@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="labels">
+        <item>Daisy</item>
+        <item>Dandelion</item>
+        <item>Roses</item>
+        <item>Sunflowers</item>
+        <item>Tulips</item>
+    </string-array>
+
+    <string-array name="pref_name_devices">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string-array name="pref_value_devices">
+        <item>cpu</item>
+        <item>gpu</item>
+        <item>nnapi</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/permission_fragment">
+
+    <fragment
+        android:id="@+id/permission_fragment"
+        android:name="com.nex3z.flowers.modelmaker.ui.permission.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+        <action
+            android:id="@+id/action_permission_to_camera"
+            app:destination="@id/camera_fragment"
+            app:popUpTo="@id/permission_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/camera_fragment"
+        android:name="com.nex3z.flowers.modelmaker.ui.camera.CameraFragment"
+        android:label="camera_fragment"
+        tools:layout="@layout/camera_fragment" >
+        <action
+            android:id="@+id/action_camera_to_permission"
+            app:destination="@id/permission_fragment"
+            app:popUpTo="@id/camera_fragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_camera_to_settings"
+            app:destination="@id/settings_fragment"
+            app:popUpTo="@id/camera_fragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.nex3z.flowers.modelmaker.ui.settings.SettingsFragment"
+        android:label="@string/c_settings_title" >
+        <action
+            android:id="@+id/action_settings_to_camera"
+            app:destination="@id/camera_fragment"
+            app:popUpTo="@id/camera_fragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

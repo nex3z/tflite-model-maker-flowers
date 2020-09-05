@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/c_settings_header_classifier">
+
+        <ListPreference
+            app:key="@string/key_settings_device"
+            app:defaultValue="cpu"
+            app:icon="@drawable/ic_settings_device"
+            app:entries="@array/pref_name_devices"
+            app:entryValues="@array/pref_value_devices"
+            app:title="@string/c_settings_compute_device"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/key_settings_multi_crop_enabled"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_settings_multi_crop"
+            app:title="@string/c_settings_multi_crop"
+            app:summaryOn="@string/c_settings_multi_crop_summary_on"
+            app:summaryOff="@string/c_settings_multi_crop_summary_off" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/c_settings_header_about">
+
+        <Preference
+            app:key="key_app_version"
+            app:icon="@drawable/ic_settings_app_version"
+            app:title="@string/c_settings_app_version"/>
+
+        <Preference
+            app:key="key_model_version"
+            app:icon="@drawable/ic_settings_model_version"
+            app:title="@string/c_settings_model_version"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

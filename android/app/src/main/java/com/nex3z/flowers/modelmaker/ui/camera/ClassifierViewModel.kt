@@ -35,7 +35,7 @@ class ClassifierViewModel(
     val model: Model = MOBILE_NET_V2_FLOAT16_MODEL
     private var classifier: Classifier? = null
     private var lastAnalyzedTimestamp = 0L
-    private var confidentThreshold: Float = 0.9f
+    private var confidentThreshold: Float = getDetectThreshold(getApplication())
     private var scales: FloatArray = SINGLE_SCALE
 
     val executor: ExecutorService = Executors.newSingleThreadExecutor()
@@ -60,7 +60,7 @@ class ClassifierViewModel(
             try {
                 classifier = Classifier(
                         context = getApplication(),
-                        model = model,
+//                        model = model,
                         device = device,
                         topK = 1
                 )
@@ -125,6 +125,7 @@ class ClassifierViewModel(
                 }
             }
             val idx = recognitions.argMax()
+            Timber.v("classify(): recognitions[idx] = ${recognitions[idx]}")
             if (recognitions[idx].confidence >= confidentThreshold) {
                 Timber.v("classify(): recognition = ${recognitions[idx]}")
                 _recognition.postValue(Result(images[idx], recognitions[idx]))

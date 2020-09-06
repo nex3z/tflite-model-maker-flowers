@@ -25,7 +25,7 @@ fun isMultiCropEnabled(context: Context): Boolean =
     getBooleanValue(context, context.getString(R.string.key_settings_multi_crop_enabled), false)
 
 fun getDetectThreshold(context: Context): Float =
-    getIntValue(context, context.getString(R.string.key_settings_confidence_threshold), 90) / 100.0f
+    getIntValue(context, context.getString(R.string.key_settings_confidence_threshold), 30) / 100.0f
 
 fun getDevice(context: Context): Device =
     when (getStringValue(context, context.getString(R.string.key_settings_device), "cpu")) {

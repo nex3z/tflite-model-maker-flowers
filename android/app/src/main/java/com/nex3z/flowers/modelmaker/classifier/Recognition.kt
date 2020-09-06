@@ -5,7 +5,7 @@ import kotlin.Comparator
 import kotlin.math.min
 
 data class Recognition(
-    val label: Int,
+    val label: String,
     val confidence: Float
 )
 

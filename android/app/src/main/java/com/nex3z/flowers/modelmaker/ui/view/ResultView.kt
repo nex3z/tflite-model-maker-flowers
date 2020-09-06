@@ -22,7 +22,7 @@ class ResultView(
 
     fun render(result: Result) {
         iv_vr_image.setImageBitmap(result.image)
-        tv_vr_label.text = labels[result.recognition.label]
+        tv_vr_label.text = result.recognition.label
         tv_vr_conf.text = String.format("%.4f", result.recognition.confidence)
     }
 }

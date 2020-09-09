@@ -20,6 +20,13 @@
             app:summaryOn="@string/c_settings_multi_crop_summary_on"
             app:summaryOff="@string/c_settings_multi_crop_summary_off" />
 
+        <SeekBarPreference
+            app:key="@string/key_settings_confidence_threshold"
+            app:defaultValue="@string/default_settings_confidence_threshold"
+            app:icon="@drawable/ic_settings_threshold"
+            app:title="@string/c_settings_confidence_threshold"
+            app:showSeekBarValue="true"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/c_settings_header_about">
